@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skill Test Quiz | FuturePath AI</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="assets/js/app.js" defer></script>
+    <script src="assets/js/quiz.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">FP</span>
+          <span class="brand-copy">FuturePath AI<small>Skill intelligence quiz</small></span>
+        </a>
+        <button class="nav-toggle" aria-label="Open navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links">
+          <a href="dashboard.html">Dashboard</a>
+          <a href="career-predictor.html">Predictor</a>
+          <a href="resume-lab.html">Resume Lab</a>
+          <a href="voice-chatbot.html">Voice Bot</a>
+        </div>
+        <div class="nav-actions">
+          <a class="btn btn-ghost" href="login.html" data-auth-link>Login</a>
+          <a class="btn btn-primary" href="signup.html" data-auth-cta>Start Free</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container page-hero-grid">
+          <div class="glass-card reveal">
+            <span class="tag">Skill Test Quiz</span>
+            <h1>Measure how you think, build, and lead</h1>
+            <p>The quiz uncovers your strongest operating pattern so you can align your career path with the way you naturally perform.</p>
+          </div>
+          <div class="spotlight-card reveal">
+            <div class="info-card">
+              <span class="tag">Outputs</span>
+              <p>Live progress, final score, behavior profile, chart visualization, and saved history for your dashboard.</p>
+            </div>
+            <div class="info-card">
+              <span class="tag">Tip</span>
+              <p>Use the auto-fill button if you want to preview the flow quickly before trying your own answers.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container quiz-layout">
+          <div class="panel-card reveal">
+            <div class="quiz-progress">
+              <div class="progress-bar"><span id="quizProgressFill"></span></div>
+              <span id="quizProgressLabel">0/0 answered</span>
+            </div>
+            <form id="quizForm">
+              <div id="quizContainer"></div>
+              <div class="button-row">
+                <button class="btn btn-primary" type="submit">Submit Quiz</button>
+                <button class="btn btn-secondary" type="button" id="autoFillQuiz">Auto Fill Demo</button>
+                <button class="btn btn-ghost" type="button" id="resetQuiz">Reset Quiz</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="spotlight-card reveal">
+            <div class="chart-card">
+              <h3>Result chart</h3>
+              <canvas id="quizChart"></canvas>
+            </div>
+            <div id="quizResult">
+              <div class="empty-state">
+                <h3>Quiz insights will appear here</h3>
+                <p>Complete the quiz to unlock your strongest career behavior pattern.</p>
+              </div>
+            </div>
+            <button class="btn btn-secondary" type="button" id="downloadQuizReport">Download Result</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

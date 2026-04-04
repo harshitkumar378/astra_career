@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | FuturePath AI</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="assets/js/app.js" defer></script>
+    <script src="assets/js/dashboard.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">FP</span>
+          <span class="brand-copy">FuturePath AI<small>User dashboard</small></span>
+        </a>
+        <button class="nav-toggle" aria-label="Open navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links">
+          <a href="career-predictor.html">Predictor</a>
+          <a href="skill-quiz.html">Skill Test</a>
+          <a href="resume-lab.html">Resume Lab</a>
+          <a href="voice-chatbot.html">Voice Bot</a>
+          <a href="admin.html">Admin</a>
+        </div>
+        <div class="nav-actions">
+          <a class="btn btn-ghost" href="login.html" data-auth-link>Login</a>
+          <a class="btn btn-primary" href="signup.html" data-auth-cta>Start Free</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container page-hero-grid">
+          <div class="glass-card reveal">
+            <span class="tag">Personal Hub</span>
+            <h1><span data-dashboard-name>User</span>, your growth dashboard is live</h1>
+            <p>Track predictions, review skill signals, improve resume quality, and move between all features from one clean product dashboard.</p>
+            <div class="button-row">
+              <a class="btn btn-primary" href="career-predictor.html">Run New Prediction</a>
+              <a class="btn btn-secondary" href="skill-quiz.html">Retake Skill Test</a>
+              <button class="btn btn-ghost" id="downloadSnapshot" type="button">Download Snapshot</button>
+            </div>
+          </div>
+          <div class="spotlight-card reveal">
+            <div class="info-card">
+              <span class="tag">Current mode</span>
+              <h3>Mobile-app style career cockpit</h3>
+              <p>Everything on this page is designed to feel like a real SaaS dashboard, including charts, activity, metrics, and quick actions.</p>
+            </div>
+            <div class="info-card">
+              <span class="tag">Quick access</span>
+              <div class="chip-list">
+                <span class="pill">Live charts</span>
+                <span class="pill">Stored history</span>
+                <span class="pill">AI guidance</span>
+                <span class="pill">Responsive layout</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="dashboard-grid">
+            <article class="stat-card col-3 reveal">
+              <h3>Predictions</h3>
+              <span class="value" id="metricPredictions">0</span>
+              <p>Career path simulations saved</p>
+            </article>
+            <article class="stat-card col-3 reveal">
+              <h3>Readiness</h3>
+              <span class="value" id="metricReadiness">0%</span>
+              <p>Current skill readiness level</p>
+            </article>
+            <article class="stat-card col-3 reveal">
+              <h3>Resume Score</h3>
+              <span class="value" id="metricResume">0%</span>
+              <p>ATS-style strength indicator</p>
+            </article>
+            <article class="stat-card col-3 reveal">
+              <h3>Top Focus</h3>
+              <span class="value" id="metricCareer">-</span>
+              <p>Your strongest current direction</p>
+            </article>
+
+            <article class="chart-card col-8 reveal">
+              <h3>Career readiness trend</h3>
+              <p>Live line chart showing how your profile is moving over time.</p>
+              <canvas id="careerGrowthChart"></canvas>
+            </article>
+            <article class="chart-card col-4 reveal">
+              <h3>Weekly focus mix</h3>
+              <p>Where your energy should go next.</p>
+              <canvas id="focusChart"></canvas>
+            </article>
+
+            <article class="chart-card col-6 reveal">
+              <h3>Strength dimensions</h3>
+              <p>Breakdown of your current quiz or demo insight profile.</p>
+              <canvas id="strengthChart"></canvas>
+            </article>
+            <article class="panel-card col-6 reveal">
+              <div class="table-header">
+                <div>
+                  <h3>Recent activity</h3>
+                  <p>Stored events from the predictor, skill test, and resume lab.</p>
+                </div>
+                <a class="btn btn-secondary" href="voice-chatbot.html">Ask Astra</a>
+              </div>
+              <div class="dashboard-list" id="activityList"></div>
+            </article>
+
+            <article class="quick-card col-4 reveal">
+              <span class="tag">Action</span>
+              <h3>Career Predictor</h3>
+              <p>Generate a new role map using your goals, work style, and interests.</p>
+              <a class="btn btn-secondary" href="career-predictor.html">Open</a>
+            </article>
+            <article class="quick-card col-4 reveal">
+              <span class="tag">Action</span>
+              <h3>Resume Lab</h3>
+              <p>Sharpen your profile for ATS systems and more confident applications.</p>
+              <a class="btn btn-secondary" href="resume-lab.html">Open</a>
+            </article>
+            <article class="quick-card col-4 reveal">
+              <span class="tag">Action</span>
+              <h3>Voice Chatbot</h3>
+              <p>Speak your question and get dynamic career guidance with voice reply support.</p>
+              <a class="btn btn-secondary" href="voice-chatbot.html">Open</a>
+            </article>
+          </div>
+
+          <nav class="mobile-dock reveal" aria-label="Quick navigation">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="career-predictor.html">Predict</a>
+            <a href="skill-quiz.html">Quiz</a>
+            <a href="resume-lab.html">Resume</a>
+          </nav>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

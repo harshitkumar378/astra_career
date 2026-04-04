@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | FuturePath AI</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="assets/js/app.js" defer></script>
+    <script src="assets/js/auth.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">FP</span>
+          <span class="brand-copy">FuturePath AI<small>Secure local demo auth</small></span>
+        </a>
+        <button class="nav-toggle" aria-label="Open navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links">
+          <a href="career-predictor.html">Predictor</a>
+          <a href="skill-quiz.html">Skill Test</a>
+          <a href="resume-lab.html">Resume Lab</a>
+          <a href="voice-chatbot.html">Voice Bot</a>
+        </div>
+        <div class="nav-actions">
+          <a class="btn btn-ghost" href="login.html" data-auth-link>Login</a>
+          <a class="btn btn-primary" href="signup.html" data-auth-cta>Start Free</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="auth-shell">
+      <div class="container auth-layout">
+        <section class="auth-card reveal">
+          <span class="tag">Member Login</span>
+          <h1 class="auth-title">Return to your AI career command center</h1>
+          <p>Sign in to continue to your dashboard, skill results, resume suggestions, and live chatbot history.</p>
+          <div class="feature-stack">
+            <div class="stack-item">
+              <strong>Demo user</strong>
+              <p class="form-help">Email: <code>demo@futurepath.ai</code> and Password: <code>Demo@123</code></p>
+            </div>
+            <div class="stack-item">
+              <strong>Demo admin</strong>
+              <p class="form-help">Email: <code>admin@futurepath.ai</code> and Password: <code>Admin@123</code></p>
+            </div>
+            <div class="stack-item">
+              <strong>Stored locally</strong>
+              <p class="form-help">This front-end demo uses local storage, so accounts work without a backend.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="auth-card reveal">
+          <span class="tag">Login</span>
+          <form id="loginForm">
+            <div class="field">
+              <label for="loginEmail">Email</label>
+              <input id="loginEmail" name="email" type="email" placeholder="you@example.com" required />
+            </div>
+            <div class="field">
+              <label for="loginPassword">Password</label>
+              <input id="loginPassword" name="password" type="password" placeholder="Enter password" required />
+            </div>
+            <div class="button-row">
+              <button class="btn btn-primary" type="submit">Login Now</button>
+              <button class="btn btn-secondary" type="button" data-fill-demo="user">Fill Demo User</button>
+              <button class="btn btn-secondary" type="button" data-fill-demo="admin">Fill Demo Admin</button>
+            </div>
+          </form>
+          <div class="help-row">
+            <span class="form-help">New here? Create your account and start free.</span>
+            <a class="btn btn-ghost" href="signup.html">Go To Sign Up</a>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

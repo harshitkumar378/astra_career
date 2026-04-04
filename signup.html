@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up | FuturePath AI</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="assets/js/app.js" defer></script>
+    <script src="assets/js/auth.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">FP</span>
+          <span class="brand-copy">FuturePath AI<small>Create your profile</small></span>
+        </a>
+        <button class="nav-toggle" aria-label="Open navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links">
+          <a href="career-predictor.html">Predictor</a>
+          <a href="skill-quiz.html">Skill Test</a>
+          <a href="resume-lab.html">Resume Lab</a>
+          <a href="voice-chatbot.html">Voice Bot</a>
+        </div>
+        <div class="nav-actions">
+          <a class="btn btn-ghost" href="login.html" data-auth-link>Login</a>
+          <a class="btn btn-primary" href="signup.html" data-auth-cta>Start Free</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="auth-shell">
+      <div class="container auth-layout">
+        <section class="auth-card reveal">
+          <span class="tag">Create Account</span>
+          <h1 class="auth-title">Open your personalized AI career space</h1>
+          <p>Once you sign up, your dashboard, prediction history, resume reports, and chatbot guidance become part of one smooth workflow.</p>
+          <div class="feature-stack">
+            <div class="stack-item">
+              <strong>Prediction memory</strong>
+              <p class="form-help">Career recommendations are stored and reflected inside your dashboard.</p>
+            </div>
+            <div class="stack-item">
+              <strong>Skill intelligence</strong>
+              <p class="form-help">Quiz outcomes feed your growth story and help guide your next learning steps.</p>
+            </div>
+            <div class="stack-item">
+              <strong>Resume momentum</strong>
+              <p class="form-help">Keep improving your job materials using ATS-oriented suggestions and keyword bundles.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="auth-card reveal">
+          <span class="tag">Sign Up</span>
+          <form id="signupForm">
+            <div class="field-grid">
+              <div class="field">
+                <label for="signupName">Full name</label>
+                <input id="signupName" name="name" type="text" placeholder="Your full name" required />
+              </div>
+              <div class="field">
+                <label for="signupEmail">Email</label>
+                <input id="signupEmail" name="email" type="email" placeholder="you@example.com" required />
+              </div>
+            </div>
+            <div class="field">
+              <label for="signupPassword">Password</label>
+              <input id="signupPassword" name="password" type="password" placeholder="Create a strong password" required />
+              <div class="password-meter"><span></span></div>
+            </div>
+            <div class="field">
+              <label for="signupConfirmPassword">Confirm password</label>
+              <input id="signupConfirmPassword" name="confirmPassword" type="password" placeholder="Confirm password" required />
+            </div>
+            <button class="btn btn-primary" type="submit">Create Account</button>
+          </form>
+          <div class="help-row">
+            <span class="form-help">Already have an account?</span>
+            <a class="btn btn-ghost" href="login.html">Login Instead</a>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

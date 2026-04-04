@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel | FuturePath AI</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="assets/js/app.js" defer></script>
+    <script src="assets/js/admin.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">FP</span>
+          <span class="brand-copy"
+            >FuturePath AI<small>Dark futuristic admin panel</small></span
+          >
+        </a>
+        <button class="nav-toggle" aria-label="Open navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links">
+          <a href="dashboard.html">Dashboard</a>
+          <a href="career-predictor.html">Predictor</a>
+          <a href="skill-quiz.html">Skill Test</a>
+          <a href="resume-lab.html">Resume Lab</a>
+          <a href="voice-chatbot.html">Voice Bot</a>
+        </div>
+        <div class="nav-actions">
+          <a class="btn btn-ghost" href="login.html" data-auth-link>Login</a>
+          <a class="btn btn-primary" href="signup.html" data-auth-cta
+            >Start Free</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container page-hero-grid">
+          <div class="glass-card reveal">
+            <span class="tag">Admin Panel</span>
+            <h1>
+              Track platform activity in a futuristic AI operations view
+            </h1>
+            <p>
+              Review users, monitor feature usage, inspect recent activity, and
+              export platform state from a professional analytics layout.
+            </p>
+          </div>
+          <div class="spotlight-card reveal">
+            <div class="info-card">
+              <span class="tag">Built-in demo</span>
+              <p>
+                If you are not logged in as admin yet, the page can switch into
+                demo admin mode with one click.
+              </p>
+            </div>
+            <div class="info-card">
+              <span class="tag">Static but dynamic</span>
+              <p>
+                This page stays front-end only while still giving you live
+                charts, exports, and responsive controls.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div id="adminAccessGate" class="reveal"></div>
+
+          <div id="adminContent" class="dashboard-grid">
+            <article class="stat-card col-3 reveal">
+              <h3>Users</h3>
+              <span class="value" id="adminUsers">0</span>
+              <p>Total accounts stored locally</p>
+            </article>
+            <article class="stat-card col-3 reveal">
+              <h3>Predictions</h3>
+              <span class="value" id="adminPredictions">0</span>
+              <p>Career prediction submissions</p>
+            </article>
+            <article class="stat-card col-3 reveal">
+              <h3>Quiz Runs</h3>
+              <span class="value" id="adminQuiz">0</span>
+              <p>Skill test completions</p>
+            </article>
+            <article class="stat-card col-3 reveal">
+              <h3>Messages</h3>
+              <span class="value" id="adminMessages">0</span>
+              <p>Consultation requests saved</p>
+            </article>
+
+            <article class="chart-card col-8 reveal">
+              <h3>Weekly activity</h3>
+              <p>High-level platform usage pattern across recent days.</p>
+              <canvas id="adminActivityChart"></canvas>
+            </article>
+            <article class="chart-card col-4 reveal">
+              <h3>Feature usage mix</h3>
+              <p>Compare how users engage with major modules.</p>
+              <canvas id="adminFeatureChart"></canvas>
+            </article>
+
+            <article class="chart-card col-6 reveal">
+              <h3>Role and feature totals</h3>
+              <p>A compact operations view of the platform state.</p>
+              <canvas id="adminRoleChart"></canvas>
+            </article>
+            <article class="panel-card col-6 reveal">
+              <div class="table-header">
+                <div>
+                  <h3>Admin controls</h3>
+                  <p>Use the actions below to simulate management workflows.</p>
+                </div>
+              </div>
+              <div class="button-row">
+                <button
+                  class="btn btn-primary"
+                  id="downloadAdminReport"
+                  type="button"
+                >
+                  Download Admin Report
+                </button>
+                <button
+                  class="btn btn-secondary"
+                  id="sendBroadcast"
+                  type="button"
+                >
+                  Send Broadcast
+                </button>
+              </div>
+            </article>
+
+            <article class="panel-card col-6 reveal">
+              <h3>Recent users</h3>
+              <div class="admin-table" id="recentUsers"></div>
+            </article>
+            <article class="panel-card col-6 reveal">
+              <h3>Platform events</h3>
+              <div class="admin-table" id="platformEvents"></div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

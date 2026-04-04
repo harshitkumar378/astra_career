@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Lab | FuturePath AI</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="assets/js/app.js" defer></script>
+    <script src="assets/js/resume.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">FP</span>
+          <span class="brand-copy">FuturePath AI<small>Resume suggestion lab</small></span>
+        </a>
+        <button class="nav-toggle" aria-label="Open navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links">
+          <a href="dashboard.html">Dashboard</a>
+          <a href="career-predictor.html">Predictor</a>
+          <a href="skill-quiz.html">Skill Test</a>
+          <a href="voice-chatbot.html">Voice Bot</a>
+        </div>
+        <div class="nav-actions">
+          <a class="btn btn-ghost" href="login.html" data-auth-link>Login</a>
+          <a class="btn btn-primary" href="signup.html" data-auth-cta>Start Free</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container page-hero-grid">
+          <div class="glass-card reveal">
+            <span class="tag">Resume Suggestion Page</span>
+            <h1>Generate a cleaner, stronger, more ATS-friendly resume direction</h1>
+            <p>Choose a role, describe your strengths, and instantly get a better summary, section order, keywords, and action suggestions.</p>
+            <div class="button-row">
+              <button class="btn btn-secondary" type="button" data-template="data-scientist">Load Data Scientist</button>
+              <button class="btn btn-secondary" type="button" data-template="product-manager">Load AI PM</button>
+              <button class="btn btn-secondary" type="button" data-template="ux-research">Load UX Research</button>
+            </div>
+          </div>
+          <div class="spotlight-card reveal">
+            <div class="info-card">
+              <span class="tag">What it creates</span>
+              <p>ATS score, summary text, suggested bullet improvements, section sequence, and priority keyword chips.</p>
+            </div>
+            <div class="info-card">
+              <span class="tag">Best use</span>
+              <p>Use after the predictor and quiz so your resume reflects the strongest role-fit and skill dimensions.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container dashboard-grid">
+          <article class="panel-card col-6 reveal">
+            <h3>Resume input</h3>
+            <form id="resumeForm">
+              <div class="field-grid">
+                <div class="field">
+                  <label for="resumeRole">Target role</label>
+                  <input id="resumeRole" name="targetRole" type="text" placeholder="AI Product Manager" required />
+                </div>
+                <div class="field">
+                  <label for="resumeExperience">Experience level</label>
+                  <select id="resumeExperience" name="experienceLevel">
+                    <option value="junior">Junior</option>
+                    <option value="mid">Mid</option>
+                    <option value="senior">Senior</option>
+                  </select>
+                </div>
+              </div>
+              <div class="field">
+                <label for="resumeSkills">Top skills</label>
+                <textarea id="resumeSkills" name="topSkills" placeholder="Python, SQL, analytics, product thinking" required></textarea>
+              </div>
+              <div class="field">
+                <label for="resumeAchievements">Achievements</label>
+                <textarea id="resumeAchievements" name="achievements" placeholder="Describe impact with measurable outcomes" required></textarea>
+              </div>
+              <div class="field">
+                <label for="resumeTools">Tools and platforms</label>
+                <textarea id="resumeTools" name="tools" placeholder="Figma, Jira, Power BI, Git, scikit-learn" required></textarea>
+              </div>
+              <div class="field">
+                <label for="resumeTone">Preferred tone</label>
+                <select id="resumeTone" name="tone">
+                  <option value="impact">Impact-first</option>
+                  <option value="leadership">Leadership-focused</option>
+                  <option value="story">Narrative and story</option>
+                </select>
+              </div>
+              <button class="btn btn-primary" type="submit">Generate Resume Guidance</button>
+            </form>
+          </article>
+
+          <article class="panel-card col-6 reveal">
+            <div class="table-header">
+              <div>
+                <h3>Generated output</h3>
+                <p>Copy a strong summary or download a compact resume plan.</p>
+              </div>
+              <div class="button-row">
+                <button class="btn btn-secondary" id="copyResumeSummary" type="button">Copy Summary</button>
+                <button class="btn btn-ghost" id="downloadResumePlan" type="button">Download Plan</button>
+              </div>
+            </div>
+            <div id="resumeOutput">
+              <div class="empty-state">
+                <h3>Resume recommendations will appear here</h3>
+                <p>Fill the form and generate your report to unlock ATS scoring, keywords, and better section ordering.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

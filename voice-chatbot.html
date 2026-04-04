@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voice Chatbot | FuturePath AI</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="assets/js/app.js" defer></script>
+    <script src="assets/js/chatbot.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">FP</span>
+          <span class="brand-copy">FuturePath AI<small>Voice chatbot assistant</small></span>
+        </a>
+        <button class="nav-toggle" aria-label="Open navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links">
+          <a href="dashboard.html">Dashboard</a>
+          <a href="career-predictor.html">Predictor</a>
+          <a href="skill-quiz.html">Skill Test</a>
+          <a href="resume-lab.html">Resume Lab</a>
+        </div>
+        <div class="nav-actions">
+          <a class="btn btn-ghost" href="login.html" data-auth-link>Login</a>
+          <a class="btn btn-primary" href="signup.html" data-auth-cta>Start Free</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container page-hero-grid">
+          <div class="glass-card reveal">
+            <span class="tag">Voice Chatbot</span>
+            <h1>Talk with Astra, your cute AI career guide</h1>
+            <p>Use text or voice to ask about resumes, interviews, skill growth, role transitions, and the next action you should take.</p>
+            <div class="chip-list">
+              <button class="suggestion-chip" type="button">What career should I focus on?</button>
+              <button class="suggestion-chip" type="button">How can I improve my resume?</button>
+              <button class="suggestion-chip" type="button">Give me interview tips</button>
+            </div>
+          </div>
+          <div class="spotlight-card reveal">
+            <div class="info-card">
+              <span class="tag">Voice ready</span>
+              <p>If your browser supports speech recognition, you can talk directly and get spoken responses back.</p>
+            </div>
+            <div class="info-card">
+              <span class="tag">Always helpful</span>
+              <p>The floating chatbot in the bottom corner stays present across pages, but this page gives you the full chat experience.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container chat-layout">
+          <article class="panel-card reveal">
+            <span class="tag">Suggested prompts</span>
+            <h3>Ask about your next move</h3>
+            <div class="feature-stack">
+              <div class="stack-item">Use the predictor first if you want more tailored career recommendations.</div>
+              <div class="stack-item">Try the skill quiz before asking which roles match your working style.</div>
+              <div class="stack-item">Generate resume guidance, then ask the bot how to tighten the wording further.</div>
+            </div>
+          </article>
+
+          <article class="panel-card chat-window reveal">
+            <div class="chat-header">
+              <div class="help-row">
+                <div class="chat-avatar" id="chatHeaderFace">^_^</div>
+                <div>
+                  <strong>Astra Assistant</strong>
+                  <div class="form-help">Live voice-ready AI helper</div>
+                </div>
+              </div>
+              <div class="button-row">
+                <button class="btn btn-secondary" type="button" id="startListening">Start Voice</button>
+                <button class="btn btn-ghost" type="button" id="toggleVoice">Voice On</button>
+              </div>
+            </div>
+            <div class="chat-messages" id="chatMessages"></div>
+            <form class="chat-composer" id="chatForm">
+              <div class="chat-input-row">
+                <input id="chatInput" type="text" placeholder="Ask Astra about career growth, resumes, or interview prep..." />
+                <button class="btn btn-primary" type="submit">Send</button>
+              </div>
+            </form>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FuturePath AI | Career Guidance Platform</title>
+    <meta
+      name="description"
+      content="FuturePath AI is a futuristic career guidance website with career prediction, skill testing, resume suggestions, voice chatbot, analytics dashboard, and admin controls."
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="assets/js/app.js" defer></script>
+    <script src="assets/js/home.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">FP</span>
+          <span class="brand-copy"
+            >FuturePath AI<small>Career Intelligence Platform</small></span
+          >
+        </a>
+        <button class="nav-toggle" aria-label="Open navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links">
+          <a href="career-predictor.html">Predictor</a>
+          <a href="skill-quiz.html">Skill Test</a>
+          <a href="resume-lab.html">Resume Lab</a>
+          <a href="voice-chatbot.html">Voice Bot</a>
+          <a href="admin.html">Admin</a>
+        </div>
+        <div class="nav-actions">
+          <a class="btn btn-ghost" href="login.html" data-auth-link>Login</a>
+          <a class="btn btn-primary" href="signup.html" data-auth-cta
+            >Start Free</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <span class="eyebrow"
+              >AI-led planning for students, professionals, and career
+              switchers</span
+            >
+            <h1>
+              Build a future-ready path to
+              <span id="heroCareerTarget">AI Product Manager</span>
+            </h1>
+            <p>
+              One clean platform for career prediction, skill diagnosis, resume
+              improvements, live voice guidance, user analytics, and a
+              futuristic dashboard that feels like a premium AI product.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="career-predictor.html"
+                >Start Career Prediction</a
+              >
+              <a class="btn btn-secondary" href="dashboard.html"
+                >Open My Dashboard</a
+              >
+              <button
+                class="btn btn-ghost"
+                data-scroll-target="#platformModules"
+              >
+                See Modules
+              </button>
+              <button
+                class="btn btn-secondary"
+                type="button"
+                data-demo-login="user"
+              >
+                Try Demo User
+              </button>
+            </div>
+            <div class="hero-metrics">
+              <article class="metric-chip">
+                <strong data-count="96" data-suffix="%">0%</strong>
+                <span>prediction confidence</span>
+              </article>
+              <article class="metric-chip">
+                <strong data-count="12" data-suffix="k">0k</strong>
+                <span>career signals analyzed</span>
+              </article>
+              <article class="metric-chip">
+                <strong data-count="24" data-suffix="/7">0/7</strong>
+                <span>voice assistant support</span>
+              </article>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal">
+            <div class="dashboard-preview glass-card tilt-card">
+              <div class="preview-topbar">
+                <div>
+                  <strong class="mono">Dynamic Insight Feed</strong>
+                  <div class="form-help">Always-on AI guidance</div>
+                </div>
+                <span class="status-dot">Live</span>
+              </div>
+              <div class="preview-stats">
+                <div class="mini-stat">
+                  <strong>91%</strong>
+                  <span>career fit</span>
+                </div>
+                <div class="mini-stat">
+                  <strong>83%</strong>
+                  <span>skill score</span>
+                </div>
+                <div class="mini-stat">
+                  <strong>86%</strong>
+                  <span>resume score</span>
+                </div>
+              </div>
+              <div class="mini-chart">
+                <canvas id="heroTrendChart"></canvas>
+              </div>
+              <div class="score-list">
+                <div class="score-item">
+                  <strong>Roadmap</strong>
+                  <span>30-day action plan</span>
+                </div>
+                <div class="score-item">
+                  <strong>Voice Bot</strong>
+                  <span>Ask career questions</span>
+                </div>
+                <div class="score-item">
+                  <strong>Admin View</strong>
+                  <span>Track platform activity</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="platformModules">
+        <div class="container">
+          <div class="section-header reveal">
+            <div>
+              <span class="tag">Platform Modules</span>
+              <h2>Everything works as a connected AI career product</h2>
+              <p>
+                Every button leads somewhere useful, every page has its own
+                dynamic behavior, and all activity is stored locally for a real
+                product feel.
+              </p>
+            </div>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card col-4 reveal tilt-card">
+              <div class="icon-badge">01</div>
+              <h3>Career Prediction</h3>
+              <p>
+                Analyze goals, strengths, interests, and work style to surface
+                top-fit roles with action roadmaps.
+              </p>
+              <a class="btn btn-secondary" href="career-predictor.html"
+                >Open Predictor</a
+              >
+            </article>
+            <article class="feature-card col-4 reveal tilt-card">
+              <div class="icon-badge">02</div>
+              <h3>Skill Test Quiz</h3>
+              <p>
+                Measure analytical, creative, leadership, and execution
+                dimensions through an interactive quiz flow.
+              </p>
+              <a class="btn btn-secondary" href="skill-quiz.html"
+                >Take Skill Test</a
+              >
+            </article>
+            <article class="feature-card col-4 reveal tilt-card">
+              <div class="icon-badge">03</div>
+              <h3>Resume Lab</h3>
+              <p>
+                Get ATS-style scoring, cleaner summaries, keyword packs, and
+                section ordering suggestions instantly.
+              </p>
+              <a class="btn btn-secondary" href="resume-lab.html"
+                >Improve Resume</a
+              >
+            </article>
+            <article class="feature-card col-4 reveal tilt-card">
+              <div class="icon-badge">04</div>
+              <h3>Charts Dashboard</h3>
+              <p>
+                Monitor readiness, recent activity, growth charts, and personal
+                actions from a sleek mobile-style interface.
+              </p>
+              <a class="btn btn-secondary" href="dashboard.html"
+                >View Dashboard</a
+              >
+            </article>
+            <article class="feature-card col-4 reveal tilt-card">
+              <div class="icon-badge">05</div>
+              <h3>Voice Chatbot</h3>
+              <p>
+                Use speech input, get spoken replies, and ask about career
+                paths, resume strategy, or interviews.
+              </p>
+              <a class="btn btn-secondary" href="voice-chatbot.html"
+                >Talk To Astra</a
+              >
+            </article>
+            <article class="feature-card col-4 reveal tilt-card">
+              <div class="icon-badge">06</div>
+              <h3>Admin Analytics</h3>
+              <p>
+                Open a demo admin panel with platform metrics, user lists,
+                activity charts, and export controls.
+              </p>
+              <button
+                class="btn btn-secondary"
+                type="button"
+                data-demo-login="admin"
+              >
+                Open Demo Admin
+              </button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container page-hero-grid">
+          <div class="glass-card reveal">
+            <span class="tag">How it works</span>
+            <h2>Move from confusion to clarity in three guided stages</h2>
+            <div class="timeline">
+              <div class="timeline-item">
+                <strong>1. Diagnose your direction</strong>
+                <p>
+                  Run the career predictor and skill quiz to reveal where your
+                  strengths create the strongest fit.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <strong>2. Turn insights into assets</strong>
+                <p>
+                  Use the resume lab and dashboard to turn the raw signal into
+                  visible career materials and progress tracking.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <strong>3. Keep momentum live</strong>
+                <p>
+                  Talk to the voice chatbot anytime and review platform growth
+                  through the admin and user analytics pages.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="spotlight-card reveal">
+            <div class="info-card">
+              <span class="tag">Popular pathways</span>
+              <h3>Top AI-age roles discovered by the platform</h3>
+              <div class="chip-list">
+                <span class="pill">AI Product Manager</span>
+                <span class="pill">ML Engineer</span>
+                <span class="pill">UX Research Analyst</span>
+                <span class="pill">Data Scientist</span>
+                <span class="pill">Cloud Automation Engineer</span>
+              </div>
+            </div>
+            <div class="info-card">
+              <span class="tag">Professional structure</span>
+              <h3>
+                Designed like a real product, not just a single landing page
+              </h3>
+              <p>
+                The website includes full navigation, stateful pages, local
+                account flows, charts, forms, scroll effects, hover effects, and
+                responsive layouts for desktop and mobile.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header reveal">
+            <div>
+              <span class="tag">Testimonials</span>
+              <h2>Professional experience with app-like polish</h2>
+            </div>
+          </div>
+          <div class="feature-grid">
+            <article class="testimonial-card col-4 reveal">
+              <p>
+                "The dashboard and predictor feel like a premium startup
+                product. I could actually imagine using it every week."
+              </p>
+              <strong>Student user</strong>
+            </article>
+            <article class="testimonial-card col-4 reveal">
+              <p>
+                "The resume guidance gave me clearer phrasing, stronger
+                keywords, and better confidence before applications."
+              </p>
+              <strong>Career switcher</strong>
+            </article>
+            <article class="testimonial-card col-4 reveal">
+              <p>
+                "The voice chatbot and admin demo made it feel like a full
+                digital product, not just static pages."
+              </p>
+              <strong>Portfolio reviewer</strong>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header reveal">
+            <div>
+              <span class="tag">FAQ</span>
+              <h2>Questions people ask before they start</h2>
+            </div>
+          </div>
+          <div class="faq-list">
+            <article class="faq-item reveal">
+              <button class="faq-toggle" type="button">
+                <span
+                  >Is this website fully front-end and ready for VS Code?</span
+                >
+                <span>+</span>
+              </button>
+              <div class="faq-content">
+                <p>
+                  Yes. It uses plain HTML, CSS, and JavaScript with local
+                  storage, so you can open it directly after copying the files.
+                </p>
+              </div>
+            </article>
+            <article class="faq-item reveal">
+              <button class="faq-toggle" type="button">
+                <span>Do login and signup actually work?</span>
+                <span>+</span>
+              </button>
+              <div class="faq-content">
+                <p>
+                  Yes. Accounts are stored in the browser using local storage,
+                  and the demo user plus demo admin are seeded automatically.
+                </p>
+              </div>
+            </article>
+            <article class="faq-item reveal">
+              <button class="faq-toggle" type="button">
+                <span>What makes it dynamic?</span>
+                <span>+</span>
+              </button>
+              <div class="faq-content">
+                <p>
+                  The background animates continuously, the chatbot face
+                  changes, charts render live, counters animate, scroll reveal
+                  effects fire, and forms generate real results.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container page-hero-grid">
+          <div class="glass-card reveal">
+            <span class="tag">Book a session</span>
+            <h2>Save a consultation request</h2>
+            <p>
+              Use this section like a professional call-to-action block.
+              Requests are stored locally so the admin page can reflect
+              activity.
+            </p>
+            <form id="contactForm">
+              <div class="field-grid">
+                <div class="field">
+                  <label for="contactName">Full name</label>
+                  <input
+                    id="contactName"
+                    name="name"
+                    type="text"
+                    placeholder="Your name"
+                    required
+                  />
+                </div>
+                <div class="field">
+                  <label for="contactEmail">Email</label>
+                  <input
+                    id="contactEmail"
+                    name="email"
+                    type="email"
+                    placeholder="you@example.com"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="field">
+                <label for="contactInterest">What do you need help with?</label>
+                <select id="contactInterest" name="interest">
+                  <option value="Career planning">Career planning</option>
+                  <option value="Resume review">Resume review</option>
+                  <option value="Interview strategy">Interview strategy</option>
+                  <option value="Skill roadmap">Skill roadmap</option>
+                </select>
+              </div>
+              <button class="btn btn-primary" type="submit">
+                Save Request
+              </button>
+            </form>
+          </div>
+          <div class="spotlight-card reveal">
+            <div class="quick-card">
+              <span class="tag">Direct actions</span>
+              <h3>Jump straight into the pages</h3>
+              <div class="button-row">
+                <a class="btn btn-secondary" href="login.html">Login</a>
+                <a class="btn btn-secondary" href="signup.html">Sign Up</a>
+                <a class="btn btn-secondary" href="dashboard.html">Dashboard</a>
+                <a class="btn btn-secondary" href="admin.html">Admin</a>
+              </div>
+            </div>
+            <div class="quick-card">
+              <span class="tag">Responsive layout</span>
+              <h3>Desktop elegance, mobile-app energy</h3>
+              <p>
+                The cards, navigation, chatbot launcher, forms, charts, and
+                content sections all scale cleanly to smaller screens.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-copy">
+          <a class="brand" href="index.html">
+            <span class="brand-mark">FP</span>
+            <span class="brand-copy"
+              >FuturePath AI<small>Dark futuristic career guidance</small></span
+            >
+          </a>
+          <p>
+            Multi-page AI career guidance experience with animated visuals,
+            local user flows, and premium product styling.
+          </p>
+        </div>
+        <div class="footer-column">
+          <h4>Explore</h4>
+          <div class="footer-links">
+            <a href="career-predictor.html">Career Predictor</a>
+            <a href="skill-quiz.html">Skill Quiz</a>
+            <a href="resume-lab.html">Resume Lab</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Experience</h4>
+          <div class="footer-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="voice-chatbot.html">Voice Chatbot</a>
+            <a href="admin.html">Admin Panel</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Account</h4>
+          <div class="footer-links">
+            <a href="login.html">Login</a>
+            <a href="signup.html">Sign Up</a>
+            <button
+              class="btn btn-secondary"
+              type="button"
+              data-demo-login="user"
+            >
+              Demo Access
+            </button>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

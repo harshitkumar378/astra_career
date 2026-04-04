@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Career Predictor | FuturePath AI</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="assets/js/app.js" defer></script>
+    <script src="assets/js/predictor.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">FP</span>
+          <span class="brand-copy">FuturePath AI<small>Career prediction engine</small></span>
+        </a>
+        <button class="nav-toggle" aria-label="Open navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links">
+          <a href="dashboard.html">Dashboard</a>
+          <a href="skill-quiz.html">Skill Test</a>
+          <a href="resume-lab.html">Resume Lab</a>
+          <a href="voice-chatbot.html">Voice Bot</a>
+        </div>
+        <div class="nav-actions">
+          <a class="btn btn-ghost" href="login.html" data-auth-link>Login</a>
+          <a class="btn btn-primary" href="signup.html" data-auth-cta>Start Free</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container page-hero-grid">
+          <div class="glass-card reveal">
+            <span class="tag">AI Career Prediction</span>
+            <h1>Discover role-fit with a dynamic future-ready model</h1>
+            <p>Fill your profile, select your interests, and generate the top three AI-era career pathways with confidence scores and action steps.</p>
+            <div class="chip-list">
+              <span class="pill">Top-fit careers</span>
+              <span class="pill">Action roadmaps</span>
+              <span class="pill">Stored history</span>
+            </div>
+          </div>
+          <div class="spotlight-card reveal">
+            <div class="info-card">
+              <span class="tag">Best for</span>
+              <p>Students, freshers, upskillers, and professionals exploring AI-adjacent role transitions.</p>
+            </div>
+            <div class="info-card">
+              <span class="tag">Outputs</span>
+              <p>Fit score cards, visual bar chart, downloadable report, and dashboard-ready history.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="dashboard-grid">
+            <article class="panel-card col-7 reveal">
+              <div class="table-header">
+                <div>
+                  <h3>Prediction form</h3>
+                  <p>Complete the fields below to generate your AI-powered career matches.</p>
+                </div>
+                <button class="btn btn-secondary" id="loadPredictorDemo" type="button">Load Demo</button>
+              </div>
+              <form id="predictorForm">
+                <div class="field-grid">
+                  <div class="field">
+                    <label for="predictorName">Full name</label>
+                    <input id="predictorName" name="name" type="text" placeholder="Your full name" required />
+                  </div>
+                  <div class="field">
+                    <label for="predictorEducation">Education</label>
+                    <input id="predictorEducation" name="education" type="text" placeholder="B.Tech, BBA, MBA, etc." required />
+                  </div>
+                </div>
+                <div class="field-grid">
+                  <div class="field">
+                    <label for="predictorExperience">Years of experience</label>
+                    <input id="predictorExperience" name="experience" type="number" min="0" max="20" value="0" />
+                  </div>
+                  <div class="field">
+                    <label for="predictorSubject">Favorite subject</label>
+                    <select id="predictorSubject" name="favoriteSubject">
+                      <option value="math">Math</option>
+                      <option value="design">Design</option>
+                      <option value="economics">Economics</option>
+                      <option value="psychology">Psychology</option>
+                      <option value="computer-science">Computer Science</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="field-grid">
+                  <div class="field">
+                    <label for="predictorPersonality">Personality style</label>
+                    <select id="predictorPersonality" name="personality">
+                      <option value="analytical">Analytical</option>
+                      <option value="visionary">Visionary</option>
+                      <option value="empathetic">Empathetic</option>
+                      <option value="builder">Builder</option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <label for="predictorWorkStyle">Preferred work style</label>
+                    <select id="predictorWorkStyle" name="workStyle">
+                      <option value="deep-work">Deep work</option>
+                      <option value="collaboration">Collaboration</option>
+                      <option value="fast-moving">Fast moving teams</option>
+                      <option value="hybrid">Hybrid balance</option>
+                    </select>
+                  </div>
+                </div>
+                <fieldset class="field">
+                  <legend>Interest areas</legend>
+                  <div class="checkbox-group">
+                    <label class="checkbox-card"><input type="checkbox" name="interests" value="ai" /> AI tools and intelligent systems</label>
+                    <label class="checkbox-card"><input type="checkbox" name="interests" value="data" /> Data, analytics, and experimentation</label>
+                    <label class="checkbox-card"><input type="checkbox" name="interests" value="design" /> Design, research, and user behavior</label>
+                    <label class="checkbox-card"><input type="checkbox" name="interests" value="business" /> Business strategy and product decisions</label>
+                    <label class="checkbox-card"><input type="checkbox" name="interests" value="cloud" /> Cloud, automation, and scalable systems</label>
+                    <label class="checkbox-card"><input type="checkbox" name="interests" value="marketing" /> Growth, brand, and communication</label>
+                  </div>
+                </fieldset>
+                <div class="field">
+                  <label for="predictorStrengths">Strengths</label>
+                  <textarea id="predictorStrengths" name="strengths" placeholder="Describe the kind of work you are naturally good at." required></textarea>
+                </div>
+                <div class="field">
+                  <label for="predictorGoals">Career goals</label>
+                  <textarea id="predictorGoals" name="goals" placeholder="What kind of impact, role, or work environment do you want?" required></textarea>
+                </div>
+                <div class="button-row">
+                  <button class="btn btn-primary" type="submit">Generate Prediction</button>
+                  <button class="btn btn-secondary" id="savePredictionReport" type="button">Download Report</button>
+                  <button class="btn btn-ghost" type="reset">Reset Form</button>
+                </div>
+              </form>
+            </article>
+
+            <article class="chart-card col-5 reveal">
+              <h3>Prediction chart</h3>
+              <p>Your top-fit roles will appear as soon as you run the model.</p>
+              <canvas id="predictionChart"></canvas>
+              <div id="predictionResults" class="progress-list">
+                <div class="empty-state">
+                  <h3>Prediction results appear here</h3>
+                  <p>Fill the form and generate your role matches to unlock detailed cards and fit scores.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
