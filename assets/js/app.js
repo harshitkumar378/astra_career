@@ -80,7 +80,7 @@
         id: "chat-1",
         userId: "demo-user-1",
         role: "bot",
-        text: "Welcome back, Riya. Your strongest lane right now is AI product leadership plus analytics.",
+        text: "Welcome back, User. Your strongest lane right now is AI product leadership plus analytics.",
         createdAt: "2026-03-30T10:30:00.000Z"
       }
     ],
